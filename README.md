@@ -22,10 +22,10 @@ Therefore K is bad though database looks good.
 Press "Simple loop handling" button and learn its code to see the details. 
 You can compare Simple and Advanced methods for different options, for example, I get these results (for default 500 points, 512 kangaroos):
 
-RANGE_BITS = 40, DP_BITS = 8: K for Simple: 1.36, K for Advanced: 1.23 (with DP overhead).
-RANGE_BITS = 48, DP_BITS = 10: K for Simple: 1.45, K for Advanced: 1.18 (with DP overhead).
-RANGE_BITS = 56, DP_BITS = 13: K for Simple: 2.60, K for Advanced: 1.16 (with DP overhead).
-RANGE_BITS = 60, DP_BITS = 15: K for Simple: skipped(no sense), K for Advanced: 1.16 (with DP overhead).
+RANGE_BITS = 40, DP_BITS = 8: K for Simple: 1.36, K for Advanced: 1.23 (with DP overhead).<br>
+RANGE_BITS = 48, DP_BITS = 10: K for Simple: 1.45, K for Advanced: 1.18 (with DP overhead).<br>
+RANGE_BITS = 56, DP_BITS = 13: K for Simple: 2.60, K for Advanced: 1.16 (with DP overhead).<br>
+RANGE_BITS = 60, DP_BITS = 15: K for Simple: skipped(no sense), K for Advanced: 1.16 (with DP overhead).<br>
 
 2. Advanced method.
 
