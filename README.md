@@ -71,11 +71,11 @@ Here is how to confirm it:
 OR:
 - Uncomment "#define SYNTHETIC_TEST" line, press "Advanced loop handling" button for different MAX_TOTAL_ITERS and RANGE_BITS values and create this table:
 
-RANGE_BITS = 50, MAX_TOTAL_ITERS = 10M, large_loop_cnt_per_kang: 1.92 (error rate up to 1%)
-RANGE_BITS = 60, MAX_TOTAL_ITERS = 100M, large_loop_cnt_per_kang: 0.46 (error rate up to 3%)
-RANGE_BITS = 60, MAX_TOTAL_ITERS = 400M, large_loop_cnt_per_kang: 1.93 (error rate up to 1%)
-RANGE_BITS = 70, MAX_TOTAL_ITERS = 400M, large_loop_cnt_per_kang: 0.06 (error rate up to 25%)
-RANGE_BITS = 70, MAX_TOTAL_ITERS = 4000M, large_loop_cnt_per_kang: 0.51 (error rate up to 3%)
+RANGE_BITS = 50, MAX_TOTAL_ITERS = 10M, large_loop_cnt_per_kang: 1.92 (error rate up to 1%)<br>
+RANGE_BITS = 60, MAX_TOTAL_ITERS = 100M, large_loop_cnt_per_kang: 0.46 (error rate up to 3%)<br>
+RANGE_BITS = 60, MAX_TOTAL_ITERS = 400M, large_loop_cnt_per_kang: 1.93 (error rate up to 1%)<br>
+RANGE_BITS = 70, MAX_TOTAL_ITERS = 400M, large_loop_cnt_per_kang: 0.06 (error rate up to 25%)<br>
+RANGE_BITS = 70, MAX_TOTAL_ITERS = 4000M, large_loop_cnt_per_kang: 0.51 (error rate up to 3%)<br>
 
 Error rate is related to the number of kangaroos and the number of points you used, the values above is for my settings (1 kangaroo, 63 points), 
 for example, if I get total 4 large loops for 63 kangaroos it means 0.06 per kangaroo and error rate is 1/4, i.e. 25%. 
