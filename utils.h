@@ -1,6 +1,6 @@
 // (c) 2024, RetiredCoder (RC)
 // License: GPLv3, see "LICENSE.TXT" file
-// https://github.com/RetiredC/Kang-1
+// https://github.com/RetiredC/Kang-2
 
 #pragma once
 
