@@ -39,7 +39,7 @@ So the first list catches small loops up to MD_LEN size, next catches larger loo
 Though this method is not ideal and has some minor issues, it catches loops of any size and useful to examine loops in details. 
 
 There are two types of loops:
-- small even-size symmetric loops: 2, 4, 6, etc. Frequency of these loops depends on JMP_CNT value only (they don't depend on DP_BITS) and can be easily detected. 
+- small even-size symmetric loops: 2, 4, 6, etc. Frequency of these loops depends on JMP_CNT value only (they don't depend on range) and can be easily detected. 
   The most often loop has size 2, other sizes are very rare. 
 - large loops that contains many different jumps with zero sum. Probability of these loops depends on DP_BITS (range) and they appear every some_loop_coeff * sqrt(range_of_jumps) jumps (on average).
 I will show that large loops can be ignored completely in my method with two jump tables.
