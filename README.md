@@ -67,7 +67,7 @@ The formula for the number of jumps to catch a large loop is the same as for the
 Second table with large jumps (jumps must be a bit smaller than main range) increases range_of_jumps greatly almost up to main range and it allows us to ignore large loops.
 
 Here is how to confirm it:
-- Uncomment "#define ESCAPE_FROM_LARGE_LOOPS" line and check "large_loop_cnt_per_kang" value at different ranges, it's small (<0.1) and not growing at higher ranges.
+- Uncomment "#define ESCAPE_FROM_LARGE_LOOPS" line and check "large_loop_cnt_per_kang" value at different ranges, it's small (<0.1) and not growing at higher ranges.<br>
 OR:
 - Uncomment "#define SYNTHETIC_TEST" line, press "Advanced loop handling" button for different MAX_TOTAL_ITERS and RANGE_BITS values and create this table:
 
