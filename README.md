@@ -91,3 +91,5 @@ Without these large jumps kangaroos would catch loops much often and we could no
 Next part will demonstrate a fast implementation of these ideas for GPU RTX4090, it will also confirm low K for higher ranges. 
 
 ![escaping from loop](diagram.png)
+<br>
+![L2 loop](diagram2.png)
