@@ -28,8 +28,8 @@
 //Proposed here advanced loop handling does not break a chain of jumps and reduces the number of large loops for high ranges so K is the same as it must be.
 //the difference between Simple and Advanced methods grows with growing RANGE_BITS and DP_BITS
 
-#define RANGE_BITS			(40 + 0)
-#define DP_BITS				(8)
+#define RANGE_BITS			(40 + 8)
+#define DP_BITS				(10)
 
 //Usually, the higher the range, the more number of kangaroos is used (because more devices are used for solving), so their paths grow a bit slower than sqrt(range) and it helps to keep K stable.
 //but you can use fixed number of kangaroos to confirm that everything works properly for any range even without increasing the number of kangaroos
@@ -45,7 +45,7 @@
 
 ////advanced-only settings
 //it's a good idea to have a large L2 table, but not mandatory
-#define JMP_CNT2			(1*1024)
+#define JMP_CNT2			(1024)
 
 //we can escape from large loops, but there is no large loops detection on GPU fast implementation, so behaviour will be different
 //but if we dont escape large loops, stats will be incorrect, same loops will be counted many times
@@ -59,10 +59,10 @@
 // MD_LEN 16 and MD_CNT 10 mean we can handle loops up to 2^40
 
 //if defined, we stop searching a key after specified number of iterations so we can check loop stats for high RANGE_BITS
-// #define SYNTHETIC_TEST
+ #define SYNTHETIC_TEST
 #ifdef SYNTHETIC_TEST
 	#define MAX_TOTAL_ITERS		(100 * 1000 * 1000ull)
-	#define RANGE_BITS			60
+	#define RANGE_BITS			74
 	#define POINTS_CNT			CPU_THR_CNT
 	#define KANG_CNT			1
 	#define ESCAPE_FROM_LARGE_LOOPS
@@ -855,7 +855,7 @@ void TestKangaroo(int Method)
 	ToLog(s);
 	sprintf(s, "Average jumps per point: %llu. Average jumps per kangaroo: %llu", aver, aver / KANG_CNT);
 	ToLog(s);
-	double root = pow(2, RANGE_BITS / 2);
+	double root = pow(2.0, RANGE_BITS / 2.0);
 	double coef = (double)aver / root;
 	sprintf(s, "%s, K = %f (including DP overhead)", names[Method], coef);
 	ToLog(s);
